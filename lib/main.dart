@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => SongProvider(),
       child: MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Beatly - Your music app',
         theme: ThemeData(
           primarySwatch: Colors.blue,
           scaffoldBackgroundColor: Colors.grey[900],

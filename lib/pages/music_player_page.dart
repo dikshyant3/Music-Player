@@ -43,11 +43,14 @@ class _MusicPlayerPageState extends State<MusicPlayerPage> {
           backgroundColor: Colors.transparent,
           elevation: 0,
           actions: [
-            Icon(
-              Icons.star_sharp,
-              size: 18,
-              color: Colors.white,
-              )
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Icon(
+                Icons.star_sharp,
+                size: 18,
+                color: Colors.yellow,
+                ),
+            )
           ],
       ),
       body: Consumer<SongProvider>(

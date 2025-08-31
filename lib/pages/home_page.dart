@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Search Music...'),
+        title: Text('Beatly'),
         elevation: 0,
       ),
       body: Column(
@@ -82,6 +82,7 @@ class _HomePageState extends State<HomePage> {
                   return Center(
                     child: Column(
                       children: [
+                        Padding(padding: EdgeInsets.all(16)),
                         Icon(
                           Icons.music_note,
                           size: 64,
