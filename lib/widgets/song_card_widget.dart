@@ -92,6 +92,7 @@ class SongCardWidget extends StatelessWidget {
                 color: Colors.blue,
                 size: 28,
                 )
+                
             ],
           ),
           ),

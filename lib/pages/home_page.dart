@@ -13,6 +13,17 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final TextEditingController _searchController = TextEditingController();
+
+  @override
+  void initState(){
+    super.initState();
+    _searchController.addListener((){
+      if (_searchController.text.trim().isEmpty){
+        context.read<SongProvider>().clearSearch();
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,6 +54,14 @@ class _HomePageState extends State<HomePage> {
                 ),
                 contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
               ),
+              onChanged: (value) {
+                if (value.trim().isEmpty){
+                  context.read<SongProvider>().clearSearch();
+                }
+                else{
+                  context.read<SongProvider>().searchSongs(value.trim());
+                }
+              },
               onSubmitted: (value) {
                 if(value.trim().isNotEmpty){
                   context.read<SongProvider>().searchSongs(value.trim());
