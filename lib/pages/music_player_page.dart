@@ -222,7 +222,6 @@ class _MusicPlayerPageState extends State<MusicPlayerPage> {
                     )
                   ],
                 ),
-                Spacer(),
               ],
             ),
           );
